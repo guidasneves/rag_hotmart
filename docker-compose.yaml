@@ -1,17 +1,23 @@
 services:
   ingestion:
-    build: ./ingestion
+    build: ./main/ingestion
     ports:
       - "8000:8000"
     environment:
-      - QDRANT_HOST=localhost
+      - VECTOR_DB_HOST=localhost
+      - VECTOR_DB_PORT=6333
+    networks:
+      - hotmart
 
   rag:
-    build: ./rag
+    build: ./main/rag
     ports:
       - "8001:8001"
     environment:
-      - QDRANT_HOST=localhost
+      - VECTOR_DB_HOST=localhost
+      - VECTOR_DB_PORT=6333
+    networks:
+      - hotmart
 
   vector-db:
     image: qdrant/qdrant:latest
@@ -19,6 +25,12 @@ services:
       - "6333:6333"
     volumes:
       - qdrant_data:/qdrant/storage
+    networks:
+      - hotmart
 
 volumes:
   qdrant_data:
+
+networks:
+  hotmart:
+    driver: bridge
