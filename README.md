@@ -20,7 +20,7 @@ Criação de dois microserviços:
   * [Testes](#8)
     * [Pré-processamento](#8.1)
     * [RAG](#8.2)
-  * [Outros exemplos de Testes](#9)
+  * [Outros Exemplos de Testes](#9)
 
 <a name="4"></a>
 ## Tecnologias
@@ -96,5 +96,5 @@ curl -X POST http://localhost:8001/ask/ \
 ```
 
 <a name="9"></a>
-## Outros exemplos de testes
+## Outros Exemplos de Testes
 Outros exemplos de testes em `shellscripts` e `Postman` incluídos no diretório [`./tests`](tests).
