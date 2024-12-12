@@ -96,5 +96,5 @@ curl -X POST http://localhost:8001/ask/ \
 ```
 
 <a name="9"></a>
-## Outros exemplos
+## Outros exemplos de testes
 Outros exemplos de testes em `shellscripts` e `Postman` incluídos no diretório [`./tests`](tests).
