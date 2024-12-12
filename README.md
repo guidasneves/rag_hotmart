@@ -81,7 +81,7 @@ Exemplo de teste do pré-processamento do URL em cURL.
 
 <a name="8.1"></a>
 ### Pré-processamento
-```console
+```bash
 curl -X POST http://localhost:8000/pre_process_url/ \
      -H "Content-Type: application/json" \
      -d '{"url": "https://hotmart.com/pt-br/blog/como-funciona-hotmart"}'
@@ -89,7 +89,7 @@ curl -X POST http://localhost:8000/pre_process_url/ \
 
 <a name="8.2"></a>
 ### RAG
-```console
+```bash
 curl -X POST http://localhost:8001/ask/ \
      -H "Content-Type: application/json" \
      -d '{"query": "Como funciona a Hotmart?"}'
