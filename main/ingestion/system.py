@@ -25,7 +25,7 @@ client = QdrantClient(
     )
 COLLECTION_NAME = 'documents'
 
-def clean_text(text: str) -> str:
+def clean_text(text):
     """
     Um dos pré-processamentos. Limpa e normaliza o texto.
     
